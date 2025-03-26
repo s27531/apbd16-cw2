@@ -30,7 +30,7 @@ class ColdContainer : Container
         double minTemperature = products[contentType];
         if (temperature < minTemperature)
         {
-            throw new Exception($"Given temperature '{temperature}' exceeds minimal temperature '{minTemperature}'.");
+            throw new Exception($"Given temperature '{temperature}' exceeds minimal temperature threshold '{minTemperature}'.");
         }
 
         ContentType = contentType;
