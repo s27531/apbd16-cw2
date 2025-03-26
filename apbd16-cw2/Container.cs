@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-class Container(double height, double weight, double depth, double maxLoad, string containerType)
+﻿class Container(double height, double weight, double depth, double maxLoad, string containerType)
 {
     private static int Counter { get; set; } = 0;
     public double LoadMass { get; set; } = 0;
@@ -19,8 +17,10 @@ class Container(double height, double weight, double depth, double maxLoad, stri
     { 
         if (LoadMass + mass > MaxLoad)
         {
-            throw new Exception(); // TODO: Swap with OverfillException
+            throw new OverfillException();
         }
         LoadMass += mass;
     }
 }
+
+class OverfillException : Exception {}
