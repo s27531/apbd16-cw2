@@ -8,7 +8,7 @@
     public string SerialNumber { get; } = $"KON-{containerType}-{Counter++}";
     public double MaxLoad { get; } = maxLoad;
 
-    public void Empty() 
+    public virtual void Empty() 
     {
         LoadMass = 0;
     }
