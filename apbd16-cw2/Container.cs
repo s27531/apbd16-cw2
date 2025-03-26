@@ -21,6 +21,11 @@
         }
         LoadMass += mass;
     }
+
+    public override string ToString()
+    {
+        return $"{this.GetType()}:{SerialNumber} (Current Load: {LoadMass} / {MaxLoad})";
+    }
 }
 
 class OverfillException : Exception {}
