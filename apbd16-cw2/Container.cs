@@ -13,7 +13,7 @@
         LoadMass = 0;
     }
 
-    public void Load(double mass)
+    public virtual void Load(double mass)
     { 
         if (LoadMass + mass > MaxLoad)
         {
